@@ -7,7 +7,7 @@ Controller.php:
 namespace EvolutionCMS\Application\Controllers;
 
 use EvolutionCMS\Models\SiteContent;
-use Illuminate\Routing\Controller;
+use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Redirect;
 
