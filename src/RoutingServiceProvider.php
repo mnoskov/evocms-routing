@@ -32,6 +32,7 @@ class RoutingServiceProvider extends ServiceProvider
                 });
 
                 $request  = Request::createFromGlobals();
+                $this->app->instance('request', $request);
                 $response = $this->app['router']->dispatch($request);
                 $response->send();
             });
