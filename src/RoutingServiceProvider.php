@@ -15,7 +15,7 @@ class RoutingServiceProvider extends ServiceProvider
         $isCliMode = defined('MOD_CLI') && !empty(MODX_CLI);
         $isManager = defined('IN_MANAGER_MODE') && !empty(IN_MANAGER_MODE);
 
-        if (!$isApiMode && !$isCliMode && !$isManager) {
+        if (!$isApiMode && !$isCliMode && !$isManager && $this->app->checkSiteStatus()) {
             with(new IlluminateRoutingServiceProvider($this->app))->register();
 
             $this->app->booted(function() {
