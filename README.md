@@ -35,7 +35,7 @@ class Controller extends BaseController
 }
 ```
 
-routes.php:
+/core/custom/routes.php:
 ```php
 <?php
 use Illuminate\Support\Facades\Route;
