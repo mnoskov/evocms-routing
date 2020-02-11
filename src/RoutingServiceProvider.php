@@ -26,10 +26,12 @@ class RoutingServiceProvider extends ServiceProvider
                 }
 
                 Route::fallback(function() {
-                    register_shutdown_function(function() {
-                        \EvolutionCMS()->executeParser();
-                    });
+                    //register_shutdown_function(function() {
+                        //\EvolutionCMS()->executeParser();
+                    //});
                 });
+
+                \EvolutionCMS()->initialize();
 
                 $request  = Request::createFromGlobals();
                 $this->app->instance('request', $request);
