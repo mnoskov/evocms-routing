@@ -1,4 +1,11 @@
-# [WIP] evocms-routing
+# evocms-routing
+
+Install:
+```
+cd core
+php artisan package:installrequire "mnoskov/evocms-routing" "*"
+composer update --lock
+```
 
 Controller.php:
 ```php
@@ -38,6 +45,7 @@ class Controller extends BaseController
 /core/custom/routes.php:
 ```php
 <?php
+
 use Illuminate\Support\Facades\Route;
 use EvolutionCMS\Application\Controllers\Controller;
 
